@@ -4,6 +4,6 @@
   "editor.fontSize": 15,
   "editor.fontLigatures": false
 },
-"markdown.preview.fontFamily": "'STIX Two Text', 'STIX Math', serif",
+"markdown.preview.fontFamily": "'IBM Plex Serif', 'STIX Math', serif",
 "markdown.preview.fontSize": 15
 }

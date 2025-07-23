@@ -25,16 +25,38 @@ This subject forms the foundational language for many areas of modern physics, i
 
 The result of a dot product is called a scalar because it is just a regular number, not a vector. However, the process is different from scalar multiplication:
 
-Scalar multiplication means multiplying a vector by a number, resulting in another vector.
-Dot product means combining two vectors to get a single number (scalar).
-So, while the result of a dot product is a scalar, the operation itself is fundamentally about comparing two vectors, not just multiplying by a number.
+- Scalar multiplication means multiplying a vector by a number, resulting in another vector. 
+- A single number (scalar) is produced by the dot product by multiplying the corresponding components of two vectors and then adding up all those products.
+For example, if you have two 3D vectors:
+
+![](https://quicklatex.com/cache3/9e/ql_3495498474ca4607fbc6db0c069c3a9e_l3.png), ![](https://quicklatex.com/cache3/04/ql_d43510977afdaf7f434ab5621885a704_l3.png)
+
+The dot product is:
+
+![](https://quicklatex.com/cache3/fd/ql_11b885a7639530d0b0f3953a74552cfd_l3.png)
+
+This sum is a single number (not a vector). The same process works for any dimension: multiply matching components, then add them all together.
+
+- Dot product means combining two vectors to get a single number (scalar).
+- So, while the result of a dot product is a scalar, the operation itself is fundamentally about comparing two vectors, not just multiplying by a number.
 
 **Note that:** When you take the dot product of two vectors, you combine them to produce a single number (a scalar). The original vectors themselves do not change - they remain the same. The dot product just tells you how much the two vectors point in the same direction, but it does not alter the vectors themselves.
 
 
 Finally, 
 
-- the **norm (or magnitude)** of a vector is a *measure of its length, calculated using the square root of the sum of the squares of its components.* These operations form the foundation for working with vectors in physics and mathematics.
+- the **norm (or magnitude)** of a vector is _a way to measure how long the vector is._ For a vector written as a list of numbers (components), you calculate the norm by squaring each component, adding them all together, and then taking the square root of that sum.
+
+For example, for a 3D vector 
+
+![](https://quicklatex.com/cache3/ba/ql_fe70a2197191a0aa057944acd193c9ba_l3.png), 
+
+the norm is:
+
+![](https://quicklatex.com/cache3/0c/ql_327f47d12b82ec5ac63062232fbd7a0c_l3.png)
+
+
+This gives you a single number that tells you the "length" of the vector, just like the length of an arrow in space. This concept is fundamental in physics and mathematics for describing distances, speeds, and many other quantities.
 
 * You can write a 3D vector like:
 
