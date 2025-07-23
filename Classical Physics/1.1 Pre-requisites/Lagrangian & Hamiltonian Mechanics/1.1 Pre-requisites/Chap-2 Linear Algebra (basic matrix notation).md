@@ -17,9 +17,23 @@ This subject forms the foundational language for many areas of modern physics, i
 
 - **On components**, a component refers to the _value of a vector along a specific axis or direction._ For example, in three-dimensional space, **a vector has three components**: _one for the x-axis, one for the y-axis, and one for the z-axis._ Each component tells you how much the vector points in that particular direction. So, the components are simply the individual numbers in the list that make up the vector.
 
-- **Vectors** can be manipulated using several basic operations. **Addition** is **performed component-wise**, meaning you _add corresponding components from each vector to get a new vector._ For example, you add the x-component of one vector to the x-component of another, and so on. To avoid any confusion, you can only add corresponding components (numbers) from two vectors of the same dimension. You cannot add extra dimensions, functionals, or other types of mathematical objects - just the matching numbers from each vector. The result is always another vector of the same dimension.
+- **Vectors** can be manipulated using several basic operations. 
+
+- **Addition** is **performed component-wise**, meaning you _add corresponding components from each vector to get a new vector._ For example, you add the x-component of one vector to the x-component of another, and so on. To avoid any confusion, you can only add corresponding components (numbers) from two vectors of the same dimension. You cannot add extra dimensions, functionals, or other types of mathematical objects - just the matching numbers from each vector. The result is always another vector of the same dimension.
+
+![](https://quicklatex.com/cache3/c0/ql_2ca4fbbdcdee16595f4d1cb29b89dac0_l3.png)
 
 - **Scalar multiplication** involves _taking a vector and multiplying every component (number) in that vector by the same single number, called a scalar._ This operation _changes the length (magnitude)_ of the vector but _keeps its direction the same - unless the scalar is negative, in which case the vector points in the opposite direction._ For example, multiplying a vector by 2 doubles its length, while multiplying by -1 flips its direction. If the original vector pointed right, multiplying by -1 makes it point left. If it pointed up, it now points down, and so on.g
+
+![](https://quicklatex.com/cache3/6b/ql_473f99423a9552588f01a4d81c35746b_l3.png)
+
+In scalar multiplication, (c) is the scalar (a single number), and (\vec{a}) is the vector. When you multiply a vector by a scalar, you multiply each component of the vector by that scalar. So, (c a_1) means you multiply the first component (a_1) by (c), (c a_2) means you multiply the second component (a_2) by (c), and so on.
+
+For example, if ![](https://quicklatex.com/cache3/57/ql_96f8267b905d56cd1efc2003efee6e57_l3.png) and (c = 4):
+
+![](https://quicklatex.com/cache3/a2/ql_0ba8cdeb333a079b2b94101e758b63a2_l3.png)
+
+So, (c a_1) just means "multiply the scalar (c) by the component (a_1)."
 
 - **dot product** _takes two vectors and produces a single number (a scalar). This scalar tells you how much the two vectors point in the same direction._ _If the vectors are pointing in exactly the same direction, the dot product is large and positive; if they are perpendicular, the dot product is zero; if they point in opposite directions, the dot product is negative._
 
@@ -53,30 +67,10 @@ For example, for a 3D vector
 
 the norm is:
 
-![](https://quicklatex.com/cache3/0c/ql_327f47d12b82ec5ac63062232fbd7a0c_l3.png)
+![](https://quicklatex.com/cache3/0c/ql_90159b2fad32bb96f01a2964eefcbc0c_l3.png)
 
 
 This gives you a single number that tells you the "length" of the vector, just like the length of an arrow in space. This concept is fundamental in physics and mathematics for describing distances, speeds, and many other quantities.
-
-* You can write a 3D vector like:
-
-  * ![](https://quicklatex.com/cache3/86/ql_827de02c6f1fc9d6a49692bcee2d7686_l3.png)
-  * This is a column vector.
-
-### Vector operations:
-
-* **Addition** (component-wise):
-
-  * ![](https://quicklatex.com/cache3/76/ql_0ba33e6534a58f4b1abd8f72efb7f276_l3.png)
-* **Scalar multiplication**:
-
-  * ![](https://quicklatex.com/cache3/ef/ql_f25ff6a0b2a898909df2e3150452d8ef_l3.png)
-* **Dot product** (produces a number):
-
-  * ![](https://quicklatex.com/cache3/9b/ql_b579fab278048794e941aec8e6c7b39b_l3.png)
-* **Norm (magnitude)**:
-
-  * ![](https://quicklatex.com/cache3/2f/ql_c42a9ccbf23162891bb25514294c542f_l3.png)
 
 ## 1.3 Matrices
 
