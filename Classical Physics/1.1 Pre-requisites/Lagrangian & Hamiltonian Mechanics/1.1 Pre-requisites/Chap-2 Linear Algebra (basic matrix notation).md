@@ -1,8 +1,8 @@
 ## 1.1 What is Linear Algebra (and why you need it)
 
-**Linear algebra** is a *branch of mathematics focused on the study of vectors, matrices, and linear transformations.* **Vectors** are *quantities that have both magnitude and direction, and they are used to represent states or configurations in many physical systems.* **Matrices** are *rectangular arrays of numbers that can represent observables, operators, or changes in spacetime, depending on the context.*
+**Linear algebra** is a _branch of mathematics focused on the study of vectors, matrices, and linear transformations._ **Vectors** are _quantities that have both magnitude and direction, and they are used to represent states or configurations in many physical systems._ **Matrices** are _rectangular arrays of numbers that can represent observables, operators, or changes in spacetime, depending on the context._
 
-This subject forms the foundational language for many areas of modern physics, including quantum mechanics, relativity, string theory, and quantum field theory (QFT). In these fields, linear algebra provides the tools to describe and manipulate the mathematical objects that model physical phenomena. *For example, in quantum mechanics, vectors represent quantum states, while matrices (or more generally, operators) represent measurements and transformations of those states.* Understanding linear algebra is therefore essential for anyone studying advanced physics or related mathematical disciplines.
+This subject forms the foundational language for many areas of modern physics, including quantum mechanics, relativity, string theory, and quantum field theory (QFT). In these fields, linear algebra provides the tools to describe and manipulate the mathematical objects that model physical phenomena. _For example, in quantum mechanics, vectors represent quantum states, while matrices (or more generally, operators) represent measurements and transformations of those states._ Understanding linear algebra is therefore essential for anyone studying advanced physics or related mathematical disciplines.
 
 ### In short:
 * Linear algebra is the study of **vectors**, **matrices**, and **linear transformations**.
@@ -13,15 +13,24 @@ This subject forms the foundational language for many areas of modern physics, i
 
 ### What is a vector?
 
-* A **vector** is a *mathematical object that represents a quantity with both direction and magnitude.* In practice, a **vector** is *often written as a list of numbers, with each number corresponding to a component, <!--individual numbers in the list that make up the vector--> along a particular axis.* For example, *a 3D vector can be written as a column of three numbers, each representing the vector’s projection along the x, y, and z axes.*
+* A **vector** is a _mathematical object that represents a quantity with both direction and magnitude._ In practice, a **vector** is _often written as a list of numbers, with each number corresponding to a component, along a particular axis._ For example, _a 3D vector can be written as a column of three numbers, each representing the vector’s projection along the x, y, and z axes._
 
-- **On components** a component refers to the value of a vector along a specific axis or direction. For example, in three-dimensional space, a vector has three components: one for the x-axis, one for the y-axis, and one for the z-axis. Each component tells you how much the vector points in that particular direction. So, the components are simply the individual numbers in the list that make up the vector.
+- **On components**, a component refers to the _value of a vector along a specific axis or direction._ For example, in three-dimensional space, **a vector has three components**: _one for the x-axis, one for the y-axis, and one for the z-axis._ Each component tells you how much the vector points in that particular direction. So, the components are simply the individual numbers in the list that make up the vector.
 
-- **Vectors** can be manipulated using several basic operations. **Addition** is **performed component-wise**, meaning you *add corresponding components from each vector to get a new vector.* 
+- **Vectors** can be manipulated using several basic operations. **Addition** is **performed component-wise**, meaning you _add corresponding components from each vector to get a new vector._ For example, you add the x-component of one vector to the x-component of another, and so on. To avoid any confusion, you can only add corresponding components (numbers) from two vectors of the same dimension. You cannot add extra dimensions, functionals, or other types of mathematical objects - just the matching numbers from each vector. The result is always another vector of the same dimension.
 
-- **Scalar multiplication** involves *multiplying each component of a vector by a single number (the scalar), which changes the vector’s length but not its direction (unless the scalar is negative, which reverses the direction).* The 
+- **Scalar multiplication** involves _taking a vector and multiplying every component (number) in that vector by the same single number, called a scalar._ This operation _changes the length (magnitude)_ of the vector but _keeps its direction the same - unless the scalar is negative, in which case the vector points in the opposite direction._ For example, multiplying a vector by 2 doubles its length, while multiplying by -1 flips its direction. If the original vector pointed right, multiplying by -1 makes it point left. If it pointed up, it now points down, and so on.g
 
-- **dot product** is an *operation that takes two vectors and produces a single number; it measures how much the vectors point in the same direction and is useful for finding angles between vectors.* 
+- **dot product** _takes two vectors and produces a single number (a scalar). This scalar tells you how much the two vectors point in the same direction._ _If the vectors are pointing in exactly the same direction, the dot product is large and positive; if they are perpendicular, the dot product is zero; if they point in opposite directions, the dot product is negative._
+
+The result of a dot product is called a scalar because it is just a regular number, not a vector. However, the process is different from scalar multiplication:
+
+Scalar multiplication means multiplying a vector by a number, resulting in another vector.
+Dot product means combining two vectors to get a single number (scalar).
+So, while the result of a dot product is a scalar, the operation itself is fundamentally about comparing two vectors, not just multiplying by a number.
+
+**Note that:** When you take the dot product of two vectors, you combine them to produce a single number (a scalar). The original vectors themselves do not change - they remain the same. The dot product just tells you how much the two vectors point in the same direction, but it does not alter the vectors themselves.
+
 
 Finally, 
 
