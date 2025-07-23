@@ -1,5 +1,10 @@
 ## 1.1 What is Linear Algebra (and why you need it)
 
+**Linear algebra** is a *branch of mathematics focused on the study of vectors, matrices, and linear transformations.* **Vectors** are *quantities that have both magnitude and direction, and they are used to represent states or configurations in many physical systems.* **Matrices** are *rectangular arrays of numbers that can represent observables, operators, or changes in spacetime, depending on the context.*
+
+This subject forms the foundational language for many areas of modern physics, including quantum mechanics, relativity, string theory, and quantum field theory (QFT). In these fields, linear algebra provides the tools to describe and manipulate the mathematical objects that model physical phenomena. *For example, in quantum mechanics, vectors represent quantum states, while matrices (or more generally, operators) represent measurements and transformations of those states.* Understanding linear algebra is therefore essential for anyone studying advanced physics or related mathematical disciplines.
+
+### In short:
 * Linear algebra is the study of **vectors**, **matrices**, and **linear transformations**.
 * It’s the language of **quantum mechanics**, **relativity**, **string theory**, and **QFT**.
 * Vectors represent states, matrices represent observables, operators, or spacetime changes.
@@ -8,7 +13,20 @@
 
 ### What is a vector?
 
-* A vector is a list of numbers that represents a quantity with direction and magnitude.
+* A **vector** is a *mathematical object that represents a quantity with both direction and magnitude.* In practice, a **vector** is *often written as a list of numbers, with each number corresponding to a component, <!--individual numbers in the list that make up the vector--> along a particular axis.* For example, *a 3D vector can be written as a column of three numbers, each representing the vector’s projection along the x, y, and z axes.*
+
+- **On components** a component refers to the value of a vector along a specific axis or direction. For example, in three-dimensional space, a vector has three components: one for the x-axis, one for the y-axis, and one for the z-axis. Each component tells you how much the vector points in that particular direction. So, the components are simply the individual numbers in the list that make up the vector.
+
+- **Vectors** can be manipulated using several basic operations. **Addition** is **performed component-wise**, meaning you *add corresponding components from each vector to get a new vector.* 
+
+- **Scalar multiplication** involves *multiplying each component of a vector by a single number (the scalar), which changes the vector’s length but not its direction (unless the scalar is negative, which reverses the direction).* The 
+
+- **dot product** is an *operation that takes two vectors and produces a single number; it measures how much the vectors point in the same direction and is useful for finding angles between vectors.* 
+
+Finally, 
+
+- the **norm (or magnitude)** of a vector is a *measure of its length, calculated using the square root of the sum of the squares of its components.* These operations form the foundation for working with vectors in physics and mathematics.
+
 * You can write a 3D vector like:
 
   * ![](https://quicklatex.com/cache3/86/ql_827de02c6f1fc9d6a49692bcee2d7686_l3.png)
