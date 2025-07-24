@@ -77,23 +77,125 @@ This gives you a single number that tells you the "length" of the vector, just l
 ### What is a matrix?
 
 * A matrix is a rectangular array of numbers.
-* Think of it as a transformation tool for vectors.
-* Example 2×2 matrix:
+* Think of it as a transformation tool for vectors, because they can act on vectors - meaning they can transform vectors by changing their direction, length, or both.
+* For example a 2×2 matrix has 2 rows and 2 columns and looks like this::
 
-  * ![](https://quicklatex.com/cache3/f1/ql_f54a65eeb9e330b1b691b19d29a55ff1_l3.png)
+  * <img src="https://quicklatex.com/cache3/f1/ql_f54a65eeb9e330b1b691b19d29a55ff1_l3.png">
 
 ### Matrix operations:
 
-* **Addition**: Add component-wise (same size only).
-* **Scalar multiplication**: Multiply each element by a number.
-* **Matrix-vector multiplication**:
+* ### Addition: 
+Matrix addition is a basic operation where you combine two matrices by adding their corresponding elements. For this to work, both matrices must have the same dimensions - that is, the same number of rows and columns. You cannot add matrices of different sizes because there would be elements in one matrix that do not have a counterpart in the other.
 
-  * ![](https://quicklatex.com/cache3/bd/ql_1745f229171977e6b6773fab622cc1bd_l3.png)
+To perform matrix addition, simply add each entry in the first matrix to the entry in the same position in the second matrix. For example, the element in the first row and first column of the result is the sum of the elements in the first row and first column of each matrix. This process is repeated for every position in the matrices.
 
-1.4 Special Matrices and 
-* **Matrix-matrix multiplication** (row × column):
+The result is a new matrix of the same size, where each entry is the sum of the corresponding entries from the original matrices. This operation is always performed entry-by-entry, and is only defined when the matrices have matching dimensions.
 
-  * ![](https://quicklatex.com/cache3/f1/ql_f54a65eeb9e330b1b691b19d29a55ff1_l3.png)
+Example:
+
+![](https://quicklatex.com/cache3/03/ql_5cd0d7dc14b16150f70f1df72cc48b03_l3.png)   
+
+and
+
+ ![](https://quicklatex.com/cache3/61/ql_3e52ac679a0d27517b99c94e63efe361_l3.png)  
+
+To add     
+
+![](https://quicklatex.com/cache3/4b/ql_ecbab37cfe73c3f7ac215ef9945f324b_l3.png)
+
+Explanation:
+
+- The $(1,1)$ entry is $1+5=6$
+
+- The $(1,2)$ entry is $2+6=8$
+
+- The $(2,1)$ entry is $3+7=10$
+
+- The $(2,2)$ entry is $4+8=12$
+
+Matrix addition is always done entry-by-entry, and only works if both matrices have the same number of rows and columns.
+
+
+* ### Scalar multiplication: Multiply each element by a number.
+
+* A **scalar** is just a regular number — like 2, 3, or -1.  
+* Scalar multiplication means **you multiply every number** inside the matrix by that same scalar. This process changes the scale of the matrix, making every value larger, smaller, or flipping its sign if the scalar is negative. 
+  It’s like applying the same filter to every value.
+  
+  Let’s say we have a matrix:
+
+![](https://quicklatex.com/cache3/03/ql_5cd0d7dc14b16150f70f1df72cc48b03_l3.png)
+
+and a scalar:
+
+![](https://quicklatex.com/cache3/45/ql_d6125dca23d24a09a5141fd27fc3f445_l3.png)
+
+To do scalar multiplication, multiply **every entry** in the matrix by the scalar:
+
+![](https://quicklatex.com/cache3/d3/ql_9cd9be15813890e4d1babd5d35c231d3_l3.png)
+
+This means:
+
+- The (1,1) entry: **3 × 1 = 3**
+- The (1,2) entry: **3 × 2 = 6**
+- The (2,1) entry: **3 × 3 = 9**
+- The (2,2) entry: **3 × 4 = 12**
+
+So the new matrix becomes:
+
+![](https://quicklatex.com/cache3/9a/ql_c327f2dd1e6531738e033a7169f8129a_l3.png)
+
+---
+
+### What does this mean?
+
+When you multiply a matrix by a scalar, you are scaling every entry in the matrix by that number. This means that the matrix’s effect - such as stretching or shrinking vectors - also gets scaled. If the scalar is positive, all the values in the matrix grow or shrink but keep their original direction. If the scalar is negative, not only do the values change in size, but their direction is also reversed (flipped).
+
+### Matrix-vector multiplication:
+is an operation where a _matrix acts on a vector to produce a new vector._ This is a fundamental way that matrices transform vectors, changing their direction, length, or both.
+
+Suppose you have a matrix (A) and a vector (\vec{x}):
+
+![](https://quicklatex.com/cache3/f6/ql_5eb4cf2f52e0a5d1df4b603e8799b2f6_l3.png)
+
+The matrix-vector multiplication (A\vec{x}) is calculated as:
+
+![](https://quicklatex.com/cache3/b2/ql_03a4f763d73d8f954c0cfb88f6c753b2_l3.png)
+
+Explanation:
+
+Each entry in the resulting vector is a sum of products: you multiply each entry in a row of the matrix by the corresponding entry in the vector, then add them up. The result is a new vector, which is generally in a different direction and may have a different length than the original vector.
+
+So, matrix-vector multiplication transforms the vector according to the rules encoded in the matrix.
+
+### Matrix-matrix Multiplication (row x column)
+**Matrix-matrix multiplication** is _an operation where you multiply two matrices to produce a new matrix. This is only possible when the number of columns in the first matrix matches the number of rows in the second matrix._
+
+_For each entry in the resulting matrix, you take the dot product of a row from the first matrix and a column from the second matrix._ This means you multiply corresponding elements and add them up.
+
+---
+
+Suppose:
+
+![](https://quicklatex.com/cache3/76/ql_76656ff4ff57bce54fd54f75bd1e2876_l3.png) ![](https://quicklatex.com/cache3/bc/ql_8750494045fe32cf17a1e8d76fd5fbbc_l3.png)
+
+Then the product ( AB ) is:
+
+![](https://quicklatex.com/cache3/38/ql_5e33097aca9fcf6560c309f7e9f52c38_l3.png)
+
+---
+
+Explanation:
+
+Each entry in the new matrix is found by multiplying the elements of a row from the first matrix by the corresponding elements of a column from the second matrix, then adding the results.
+For example, the entry in the first row and first column is ![](https://quicklatex.com/cache3/f1/ql_9e11162461279d5e7ef9dd96805dfdf1_l3.png).
+Example with numbers:
+
+![](https://quicklatex.com/cache3/4f/ql_4318236c2dac0c470bcc109ae44b3b4f_l3.png)
+
+![](https://quicklatex.com/cache3/74/ql_9429d57c7982065b519987465f268874_l3.png)
+
+So, matrix-matrix multiplication combines the transformations of both matrices into a single new matrix.
 
 ## 1.4 Special Matrices and Types
 
