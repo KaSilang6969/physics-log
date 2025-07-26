@@ -189,6 +189,7 @@ Explanation:
 
 Each entry in the new matrix is found by multiplying the elements of a row from the first matrix by the corresponding elements of a column from the second matrix, then adding the results.
 For example, the entry in the first row and first column is ![](https://quicklatex.com/cache3/f1/ql_9e11162461279d5e7ef9dd96805dfdf1_l3.png).
+
 Example with numbers:
 
 ![](https://quicklatex.com/cache3/4f/ql_4318236c2dac0c470bcc109ae44b3b4f_l3.png)
@@ -196,6 +197,96 @@ Example with numbers:
 ![](https://quicklatex.com/cache3/74/ql_9429d57c7982065b519987465f268874_l3.png)
 
 So, matrix-matrix multiplication combines the transformations of both matrices into a single new matrix.
+
+## Matrix Multiplication (Row × Column)
+
+### Given Matrices
+
+Let:
+
+![](https://quicklatex.com/cache3/6f/ql_4cc99f0ddaf00a4efb82ce871a0f5c6f_l3.png)
+
+We want to compute:
+
+![](https://quicklatex.com/cache3/60/ql_72d7b59f70ab4854e2f74621aa50d460_l3.png)
+
+---
+
+### How Matrix Multiplication Works
+
+To compute each entry of ![](https://quicklatex.com/cache3/4f/ql_48b09a8b3db3326b126db38d6e6a1d4f_l3.png):
+
+- Pick a **row** from matrix ![](https://quicklatex.com/cache3/82/ql_d6096c6b9d4cc326ee6ec961ed3e9082_l3.png)
+
+- Pick a **column** from matrix ![](https://quicklatex.com/cache3/d2/ql_03abf73052575a8c077cb6c61b98c7d2_l3.png)
+- Multiply corresponding entries and sum the results
+
+---
+
+###  Step-by-Step
+
+#### 🔹 Entry (1, 1): Top-left
+
+Row 1 of ![](https://quicklatex.com/cache3/82/ql_d6096c6b9d4cc326ee6ec961ed3e9082_l3.png): ![](https://quicklatex.com/cache3/e2/ql_8a6e3470c687f03d77e912b45141a1e2_l3.png)
+Column 1 of ![](https://quicklatex.com/cache3/d2/ql_03abf73052575a8c077cb6c61b98c7d2_l3.png): ![](https://quicklatex.com/cache3/c2/ql_2d71af5a690712482f57dd9ae96c73c2_l3.png)
+
+![](https://quicklatex.com/cache3/e6/ql_f10cca21d34da91cd744a417c3a7bbe6_l3.png)
+
+---
+
+#### 🔹 Entry (1, 2): Top-right
+
+Row 1 of ![](https://quicklatex.com/cache3/af/ql_b56151d53e5350969502b4ed9051a3af_l3.png)
+Column 2 of ![](https://quicklatex.com/cache3/23/ql_0144bd0709e1233b403348301e17d923_l3.png)
+
+![](https://quicklatex.com/cache3/79/ql_5b0472a3c8b5e993492e0f79f02bdf79_l3.png)
+
+---
+
+#### 🔹 Entry (2, 1): Bottom-left
+
+Row 2 of ![](https://quicklatex.com/cache3/36/ql_0043ff2dd9aa1ec2a521e0f4412ef236_l3.png)
+Column 1 of ![](https://quicklatex.com/cache3/c7/ql_d062d4d6a961951e86a403bd8bf820c7_l3.png)
+
+![](https://quicklatex.com/cache3/60/ql_3ae0833122766d2ca96e20ba11b41860_l3.png)
+
+---
+
+#### 🔹 Entry (2, 2): Bottom-right
+
+Row 2 of ![](https://quicklatex.com/cache3/36/ql_0043ff2dd9aa1ec2a521e0f4412ef236_l3.png)
+Column 2 of ![](https://quicklatex.com/cache3/23/ql_0144bd0709e1233b403348301e17d923_l3.png)
+
+![](https://quicklatex.com/cache3/10/ql_69a80030ba328c5313c905c3915b7010_l3.png)
+
+---
+
+### Final Result:
+
+![](https://quicklatex.com/cache3/bd/ql_1c08b9c944d04b3bd8b0ae278eb9ebbd_l3.png)
+
+---
+
+### Visualization Tip
+
+Think of matrix multiplication like **sliding a row across a column**:
+
+> Like scanning a barcode: one row (the scanner) slides over a column (the tag), combining values to produce one number.
+
+Each entry is the **sum of pairwise products** of corresponding elements.
+
+---
+
+### Summary
+
+| Step              | Action                                       |
+|-------------------|----------------------------------------------|
+| Pick row from A   | Left matrix (rows)                          |
+| Pick column from B| Right matrix (columns)                      |
+| Multiply + add    | Match 1st × 1st, 2nd × 2nd, then sum         |
+| Repeat for all entries | Until the full product matrix is filled |
+
+
 
 ## 1.4 Special Matrices and Types
 
@@ -241,12 +332,25 @@ For a 3×3 diagonal matrix:
 
 When you multiply a vector by a diagonal matrix, each component of the vector is scaled by the corresponding diagonal entry.
 
+### 🔸 Multiplying a Diagonal Matrix by a Vector
+
+Let’s say:
+
+![](https://quicklatex.com/cache3/d7/ql_1786cf5d7b76f534ee295170327bb8d7_l3.png)
+
+Then:
+
+![](https://quicklatex.com/cache3/4c/ql_2a6f32564716fd7f8a854d4cbefd8d4c_l3.png)
+
+Yes, we still "use" the 0s in multiplication — they just wipe out everything off-diagonal.
+
+
 * **Symmetric**:
 
 A symmetric matrix is a square matrix that is equal to its transpose. This means the entries are mirrored across the main diagonal: the element in row (i), column (j) is the same as the element in row (j), column (i).
 
 Mathematically:
-[ A = A^T ]
+![](https://quicklatex.com/cache3/da/ql_6abe67e801a21646d1157efcf7dbe5da_l3.png)
 
 ![](https://quicklatex.com/cache3/75/ql_dd891a84dcecfde252b8aa16c2343e75_l3.png)
 
@@ -374,7 +478,7 @@ A direction that stays unchanged under a transformation (it only gets scaled).
 - **Eigenvalue:**
 The scale factor by which the eigenvector is stretched or shrunk.
 
-## 🔸 Eigenvalue
+## Eigenvalue
 
 Formula: 
 
@@ -388,7 +492,7 @@ Formula:
 
 ---
 
-## 🔸 Characteristic Equation
+##  Characteristic Equation
 
 ![](https://quicklatex.com/cache3/43/ql_a194379995babe0d971a2022a1baf943_l3.png)
 
@@ -399,7 +503,7 @@ To find eigenvalues:
 
 ---
 
-## 🔸 Summary
+## Summary
 
 - **Eigenvectors** point in directions that remain unchanged (only scaled) under the transformation ![](https://quicklatex.com/cache3/82/ql_d6096c6b9d4cc326ee6ec961ed3e9082_l3.png)
 - **Eigenvalues** tell how much those vectors are stretched or shrunk
@@ -409,7 +513,7 @@ To find eigenvalues:
 
 ---
 
-## 🔸 Example (2×2 Matrix)
+## Example (2×2 Matrix)
 
 Given:
 
@@ -427,7 +531,7 @@ Compute:
 
 ---
 
-## 🔸 Find Eigenvectors
+## Find Eigenvectors
 
 For each eigenvalue ![](https://quicklatex.com/cache3/06/ql_0c2a4f5762d2437115c037c069d9d506_l3.png), solve:
 
@@ -445,7 +549,7 @@ Similarly for ![](https://quicklatex.com/cache3/16/ql_0f407fd359a9d6cbfe8e057e2d
 
 ---
 
-## ✅ Final Answer
+## Final Answer
 
 - Eigenvalues:
 
@@ -459,7 +563,7 @@ Similarly for ![](https://quicklatex.com/cache3/16/ql_0f407fd359a9d6cbfe8e057e2d
 
 ---
 
-## 📦 Use Cases
+## Use Cases
 
 - Diagonalization
 - Quantum mechanics
@@ -470,7 +574,7 @@ Similarly for ![](https://quicklatex.com/cache3/16/ql_0f407fd359a9d6cbfe8e057e2d
 
 ## 1.8 Basis and Change of Basis
 
-### 🔸 What Is a Basis?
+### What Is a Basis?
 
 A **basis** is a set of linearly independent vectors that can represent any vector in the space via linear combination.
 
@@ -485,7 +589,7 @@ Any vector ![](https://quicklatex.com/cache3/81/ql_eec433c672dffcdc37dca3c55a1b0
 
 ---
 
-### 🔄 Change of Basis
+### Change of Basis
 
 You can switch between two bases using a **change of basis matrix**.
 
@@ -502,7 +606,7 @@ Where:
 
 ---
 
-### 🧠 Summary
+###  Summary
 
 - Basis = coordinate system for vectors
 - Standard basis = ![](https://quicklatex.com/cache3/70/ql_3c68f72bfd90be9231c851220143cd70_l3.png)
@@ -516,7 +620,7 @@ Where:
 
 ## 1.9 Vector Spaces and Subspaces
 
-### 🧱 What Is a Vector Space?
+###  What Is a Vector Space?
 
 A **vector space** is a set of vectors that satisfies:
 
@@ -539,7 +643,7 @@ Examples:
 
 ---
 
-### 📦 What Is a Subspace?
+###  What Is a Subspace?
 
 A **subspace** is a subset of a vector space that is also a vector space. It must:
 
@@ -559,7 +663,7 @@ Examples:
 
 ---
 
-### 🧠 In Quantum Mechanics
+### In Quantum Mechanics
 
 Quantum states live in **Hilbert spaces** - special infinite-dimensional vector spaces with:
 
@@ -574,7 +678,7 @@ These are crucial for:
 
 ---
 
-### ✅ Summary
+### Summary
 
 - A **vector space** is where linear combinations make sense
 - A **subspace** is a smaller vector space inside a larger one
@@ -594,7 +698,7 @@ Then:
 
 ![](https://quicklatex.com/cache3/59/ql_4797b9f66e775024504058c84e22ca59_l3.png)
 
-🧠 Intuition:
+ Intuition:
 - Span is the **space you can reach** by stretching and adding those vectors.
 - If you're in ![](https://quicklatex.com/cache3/23/ql_dd8881b7831826c92d367f4ebd8be823_l3.png), and you span 2 vectors, you usually get a **plane**.
 
