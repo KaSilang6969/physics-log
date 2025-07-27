@@ -1,6 +1,7 @@
 ## 1.1 Newtonian Mechanics Overview
 
 ### 🧱 What Is Newtonian Mechanics?
+Newtonian mechanics - also called classical mechanics - is the framework developed by Isaac Newton in the 17th century to describe how objects move. It’s the bedrock of physics before Einstein’s relativity and quantum mechanics came along.
 
 - The **foundation of classical physics**.
 - Describes **how objects move** when forces act on them.
@@ -15,7 +16,7 @@
 ### 📜 Newton’s Three Laws of Motion
 
 1. **First Law (Law of Inertia)**  
-   An object at rest stays at rest, and an object in motion stays in motion — unless a force acts on it.
+   An object at rest stays at rest, and an object in motion stays in motion - unless a force acts on it.
 
    > No force → no change in motion.
 
