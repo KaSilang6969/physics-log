@@ -354,8 +354,17 @@ Mathematically:
 
 ![](https://quicklatex.com/cache3/75/ql_dd891a84dcecfde252b8aa16c2343e75_l3.png)
 
-Here, the off-diagonal elements are equal ((b)), so the matrix is symmetric. Symmetric matrices are important in physics and mathematics because they often represent real, observable quantities and have useful properties, such as real eigenvalues.
+Here, the off-diagonal elements are equal ((b)), so the matrix is symmetric. Symmetric matrices are significant in physics and mathematics because they frequently represent real, measurable quantities, such as energy or **covariance**. One key property of symmetric matrices is that their eigenvalues are always real numbers, which is essential for interpreting physical systems and ensuring stability in mathematical models.
 
+- **Covariance** measures how much two variables change together.
+In matrix form, the covariance matrix for variables
+
+![](https://quicklatex.com/cache3/9d/ql_7e4afc2ee2a92b5ab6e062f0ea70289d_l3.png)
+
+This matrix is always symmetric.
+
+- **Eigenvalues** tell you how much a matrix stretches or shrinks vectors in special directions (eigenvectors).
+For symmetric matrices, eigenvalues are always real.
 
 * **Orthogonal**:
 
@@ -371,7 +380,26 @@ Orthogonal matrices represent rotations and reflections. They preserve the lengt
 
 * **Hermitian**: 
 
-A Hermitian matrix is a square matrix that is equal to its own conjugate transpose. This means that each entry is the complex conjugate of its mirror image across the main diagonal. Hermitian matrices are important in quantum mechanics because they always have real eigenvalues and represent observable quantities.
+A **Hermitian matrix** is a square matrix that is equal to its own conjugate transpose. This means that each entry is the complex conjugate of its mirror image across the main diagonal. Hermitian matrices are important in quantum mechanics because they always have real eigenvalues and represent observable quantities.
+
+1.  It’s a square matrix
+Same number of rows and columns.
+
+Example: 2×2, 3×3, etc.
+
+2. It equals its own conjugate transpose
+Let's break that phrase down:
+
+**Transpose:** Flip rows into columns.
+
+**Conjugate:** Take the complex conjugate (flip the sign of the imaginary part).
+
+Example: If an entry is a + bi, the complex conjugate is a - bi.
+
+So, the matrix looks the same even after doing both:
+
+- transpose and
+- take the complex conjugate.
 
 Mathematically:
 
@@ -400,6 +428,54 @@ Example (2×2 unitary matrix):
 ![](https://quicklatex.com/cache3/4b/ql_33c68598f94c376543df524613f3714b_l3.png)
 
 Unitary matrices preserve inner products and probabilities in quantum systems.
+
+
+---
+
+NOTE FOR 1.4:
+
+- **Conjugate (Only)**
+Take the complex conjugate of each number in the matrix.
+
+![](https://quicklatex.com/cache3/17/ql_85f0045429ddd5924bd1954db691dc17_l3.png)
+
+**Example:**
+
+![](https://quicklatex.com/cache3/08/ql_ffe8f6ff9df3395086c9e9267ce8ee08_l3.png)
+
+Then:
+
+![](https://quicklatex.com/cache3/da/ql_f136c426a89a14373ae45a0e1e2762da_l3.png)
+
+Just change every ![](https://quicklatex.com/cache3/28/ql_fad4fef12a25b0fc5879d3c948d45328_l3.png)
+
+
+- **2. Conjugate Transpose**
+Do two things:
+
+- Take the transpose (flip rows ↔ columns)
+
+- Then take the complex conjugate of every entry
+
+- This is also called the Hermitian adjoint, written 𝐴†
+
+Also written as ![](https://quicklatex.com/cache3/b5/ql_12a1d6b218c9fc5d45faacff01c501b5_l3.png)
+
+Do this in **two steps**:
+
+1. **Transpose**: flip rows and columns
+2. **Take the complex conjugate** of every entry
+
+---
+
+**Step 1: Transpose**
+
+![](https://quicklatex.com/cache3/d1/ql_e3fee2cd6fa261c60839c270af36d7d1_l3.png)
+
+**Step 2: Conjugate**
+
+![](https://quicklatex.com/cache3/19/ql_0d4257455b57624aee2043b15b856719_l3.png)
+
 
 ---
 
@@ -437,7 +513,11 @@ Example:
 
 ## 1.6 Determinant and Inverse
 
-The determinant of a matrix is a scalar value that tells you important information about the matrix, such as whether it is invertible (can be "undone"). If the determinant is zero, the matrix is not invertible.
+The **determinant** is a special number you can calculate from a square matrix (like 2×2, 3×3, etc.).
+It tells you things like:
+- Whether the matrix is invertible (i.e., if it has an inverse)
+- How the matrix scales space (e.g., area or volume change)
+- If it changes the orientation (positive/negative)
 
 For a 2×2 matrix:
 
@@ -447,8 +527,32 @@ The determinant is:
 
 ![](https://quicklatex.com/cache3/83/ql_95bd4820f9666c70517f1b78369a0e83_l3.png)
 
-Inverse ![](https://quicklatex.com/cache3/5b/ql_19e45445a41540b9cdc8a62c9de6eb5b_l3.png)
+For a 3×3 matrix:
+
+Let:
+
+![](https://quicklatex.com/cache3/fa/ql_08278e4d593a57d539e894ae4be4dbfa_l3.png)
+
+Then:
+
+![](https://quicklatex.com/cache3/f1/ql_f0a942e421d80b135fdec6d10687b6f1_l3.png)
+
+
+**Inverse** ![](https://quicklatex.com/cache3/5b/ql_19e45445a41540b9cdc8a62c9de6eb5b_l3.png)
 The inverse of a matrix is another matrix that "undoes" the effect of the original matrix. Only matrices with a nonzero determinant have an inverse.
+
+The determinant is:
+
+det(A)=ad−bc
+
+So:
+
+- If ad - bc ≠ 0 → Inverse exists
+
+- If ad - bc = 0 → Inverse does not exist
+
+🔧 Formula for the Inverse
+If det(A) ≠ 0, then:
 
 For a 2×2 matrix:
 
@@ -463,6 +567,8 @@ Property:
 ![](https://quicklatex.com/cache3/87/ql_57431231a2c6ca49e0615973ce1c6287_l3.png)
 
 where (I) is the identity matrix.
+
+Think of it like reverse engineering.
 
 **Summary:**
 
